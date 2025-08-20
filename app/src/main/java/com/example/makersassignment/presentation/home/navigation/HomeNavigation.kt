@@ -6,6 +6,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
 import com.example.makersassignment.core.navigation.MainTabRoute
+import com.example.makersassignment.presentation.home.HomeRoute
 import kotlinx.serialization.Serializable
 
 fun NavController.navigateHome(
@@ -19,7 +20,10 @@ fun NavGraphBuilder.homeGraph(
     navigateUp: () -> Unit,
 ) {
     composable<Home> {
-
+        HomeRoute(
+            paddingValues = paddingValues,
+            navigateUp = navigateUp
+        )
     }
 }
 
