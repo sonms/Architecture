@@ -1,4 +1,4 @@
-package com.example.makersassignment.ui.theme
+package com.example.makersassignment.core.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 
