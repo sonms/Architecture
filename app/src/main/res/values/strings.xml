@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MakersAssignment</string>
+    <string name="ic_home_description">Home</string>
+    <string name="ic_mypage_description">My</string>
 </resources>

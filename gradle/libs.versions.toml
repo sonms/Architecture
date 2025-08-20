@@ -131,6 +131,5 @@ retrofit = [
 
 hilt = [
     "hilt",
-    "hilt-compiler",
     "hilt-navigation-compose"
 ]
