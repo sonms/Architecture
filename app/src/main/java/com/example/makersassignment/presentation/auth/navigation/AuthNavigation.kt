@@ -9,7 +9,6 @@ import com.example.makersassignment.presentation.auth.SignInRoute
 import kotlinx.serialization.Serializable
 
 fun NavGraphBuilder.authGraph(
-    paddingValues: PaddingValues,
     navigateUp: () -> Unit,
     navigateHome: () -> Unit,
 ) {
