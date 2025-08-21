@@ -62,8 +62,8 @@ fun SignInRoute(
     }
 
     SignInScreen(
-        id = uiState.id,
-        password = uiState.password,
+        id = uiState.userInfo.id,
+        password = uiState.userInfo.password,
         isIdError = uiState.isIdError,
         isPasswordError = uiState.isPasswordError,
         onIdChange = viewModel::onIdChange,
