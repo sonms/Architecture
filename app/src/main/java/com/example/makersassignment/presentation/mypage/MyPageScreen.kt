@@ -4,33 +4,43 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.example.makersassignment.presentation.mypage.component.UserInfoCard
 
 @Composable
 fun MyPageRoute(
     paddingValues: PaddingValues,
-    navigateUp: () -> Unit,
+    viewModel: MyPageViewModel = hiltViewModel()
 ) {
+    val uiState by viewModel.userInfo.collectAsStateWithLifecycle()
+
     MyPageScreen(
         paddingValues = paddingValues,
-        navigateUp = navigateUp
+        id = uiState.id,
+        password = uiState.password
     )
 }
 
 @Composable
 fun MyPageScreen(
     paddingValues: PaddingValues,
-    navigateUp: () -> Unit,
+    id : String,
+    password : String
 ) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .padding(paddingValues)
+            .padding(paddingValues),
+        contentAlignment = Alignment.Center
     ) {
-        Text(
-            text = "마이페이지"
+        UserInfoCard(
+            id = id,
+            password = password
         )
     }
 }
