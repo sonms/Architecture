@@ -1,4 +1,4 @@
-package com.example.makersassignment.core.ui.extension
+package com.example.makersassignment.core.common.extension
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
