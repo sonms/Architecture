@@ -79,7 +79,6 @@ fun MainScreen(
             )
 
             authGraph(
-                paddingValues = innerPadding,
                 navigateHome = navigator::navigateHomeFromLogin,
                 navigateUp = navigator::navigateUp,
             )
