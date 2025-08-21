@@ -2,4 +2,11 @@
     <string name="app_name">MakersAssignment</string>
     <string name="ic_home_description">Home</string>
     <string name="ic_mypage_description">My</string>
+
+    <string name="sign_in_error">아이디 또는 비밀번호를 확인해주세요</string>
+    <string name="sign_in_id_hint">아이디</string>
+    <string name="sign_in_password_hint">비밀번호</string>
+    <string name="sign_in_id_error_text">아이디는 6~10자리로 입력해주세요</string>
+    <string name="sign_in_password_error_text">비밀번호는 8~12자리로 입력해주세요</string>
+    <string name="sign_in_button_text">로그인</string>
 </resources>
