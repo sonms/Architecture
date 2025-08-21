@@ -39,7 +39,7 @@ class SignInViewModel @Inject constructor(
 
     fun onPasswordChange(password : String) {
         _uiState.update { state ->
-            val isError = password.isNotEmpty() && (password.length !in 6..10)
+            val isError = password.isNotEmpty() && (password.length !in 8..12)
 
             state.copy(
                 userInfo = state.userInfo.copy(password = password),

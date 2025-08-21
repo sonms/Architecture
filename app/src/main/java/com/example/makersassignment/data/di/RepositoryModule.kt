@@ -1,6 +1,6 @@
 package com.example.makersassignment.data.di
 
-import com.example.makersassignment.data.repositoryimpl.GalleryRepositoryImpl
+import com.example.makersassignment.data.repositoryimpl.remote.GalleryRepositoryImpl
 import com.example.makersassignment.data.repositoryimpl.local.UserRepositoryImpl
 import com.example.makersassignment.domain.repository.GalleryRepository
 import com.example.makersassignment.domain.repository.local.UserRepository
