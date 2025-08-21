@@ -33,7 +33,7 @@ import androidx.lifecycle.flowWithLifecycle
 import com.example.makersassignment.R
 import com.example.makersassignment.core.designsystem.component.CommonTextField
 import com.example.makersassignment.core.type.TextFieldType
-import com.example.makersassignment.core.ui.extension.noRippleClickable
+import com.example.makersassignment.core.common.extension.noRippleClickable
 import com.example.makersassignment.presentation.auth.component.ErrorMessage
 import timber.log.Timber
 

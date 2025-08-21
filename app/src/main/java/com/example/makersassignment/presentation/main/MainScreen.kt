@@ -70,7 +70,6 @@ fun MainScreen(
         ) {
             homeGraph(
                 paddingValues = innerPadding,
-                navigateUp = navigator::navigateUp,
             )
 
             myPageGraph(

@@ -17,12 +17,10 @@ fun NavController.navigateHome(
 
 fun NavGraphBuilder.homeGraph(
     paddingValues: PaddingValues,
-    navigateUp: () -> Unit,
 ) {
     composable<Home> {
         HomeRoute(
             paddingValues = paddingValues,
-            navigateUp = navigateUp
         )
     }
 }
