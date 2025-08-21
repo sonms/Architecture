@@ -1,4 +1,4 @@
-package com.example.makersassignment.data.dto.gallery.response
+package com.example.makersassignment.data.dto.remote.gallery.response
 
 import com.example.makersassignment.domain.entity.GalleryImageEntity
 import kotlinx.serialization.SerialName

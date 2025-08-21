@@ -20,6 +20,8 @@ androidxAppCompat = "1.7.1"
 navigation = "2.9.3"
 security = "1.1.0-alpha06"
 lifecycleRuntimeComposeAndroid = "2.9.2"
+datastorePreferences = "1.1.7"
+datastoreCoreAndroid = "1.1.7"
 
 # Hilt
 daggerHilt = "2.57"
@@ -60,6 +62,8 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 androidx-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
 androidx-security = { group = "androidx.security", name = "security-crypto-ktx", version.ref = "security" }
 androidx-lifecycle-runtime-compose-android = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose-android", version.ref = "lifecycleRuntimeComposeAndroid" }
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
+androidx-datastore-core-android = { group = "androidx.datastore", name = "datastore-core-android", version.ref = "datastoreCoreAndroid" }
 
 # Network
 okhttp-bom = { group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref = "okhttp" }
@@ -106,6 +110,8 @@ androidx = [
     "androidx-security",
     "androidx-appcompat",
     "androidx-lifecycle-runtime-compose-android",
+    "androidx-datastore-preferences",
+    "androidx-datastore-core-android"
 ]
 
 test = [

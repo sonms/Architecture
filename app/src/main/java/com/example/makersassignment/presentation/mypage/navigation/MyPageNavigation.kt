@@ -17,12 +17,10 @@ fun NavController.navigateMyPage(
 
 fun NavGraphBuilder.myPageGraph(
     paddingValues: PaddingValues,
-    navigateUp: () -> Unit,
 ) {
     composable<MyPage> {
         MyPageRoute(
             paddingValues = paddingValues,
-            navigateUp = navigateUp
         )
     }
 }
