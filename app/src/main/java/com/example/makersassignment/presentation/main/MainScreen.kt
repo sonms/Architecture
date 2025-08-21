@@ -73,8 +73,7 @@ fun MainScreen(
             )
 
             myPageGraph(
-                paddingValues = innerPadding,
-                navigateUp = navigator::navigateUp,
+                paddingValues = innerPadding
             )
 
             authGraph(
