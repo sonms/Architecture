@@ -1,5 +1,8 @@
 package com.example.makersassignment.core.common.util
 
+import androidx.compose.runtime.Stable
+
+@Stable
 sealed interface UiState<out T> {
     data object Empty : UiState<Nothing>
 
