@@ -19,7 +19,7 @@ data class GalleryImageResponseDto(
     @SerialName("download_url")
     val downloadUrl : String
 ) {
-    fun toDomain() = GalleryImageEntity (
+    fun toDomain() = GalleryImageEntity.Impl(
         id = id,
         author = author,
         width = width,
