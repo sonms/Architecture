@@ -6,7 +6,7 @@ data class UserLocalDto(
     val id : String,
     val password: String
 ) {
-    fun toDomain() = UserEntity(
+    fun toDomain() = UserEntity.Impl(
         id = id,
         password = password
     )

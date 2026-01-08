@@ -3,7 +3,6 @@ package com.example.makersassignment.presentation.auth
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.makersassignment.domain.usecase.local.SaveUserInfoUseCase
-import com.example.makersassignment.presentation.auth.model.toEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -31,7 +30,9 @@ class SignInViewModel @Inject constructor(
             val isError = id.isNotEmpty() && (id.length !in 6..10)
 
             state.copy(
-                userInfo = state.userInfo.copy(id = id),
+                userInfo = state.userInfo.modify(
+                    id = id
+                ),
                 isIdError = isError
             )
         }
@@ -42,7 +43,7 @@ class SignInViewModel @Inject constructor(
             val isError = password.isNotEmpty() && (password.length !in 8..12)
 
             state.copy(
-                userInfo = state.userInfo.copy(password = password),
+                userInfo = state.userInfo.modify(password = password),
                 isPasswordError = isError
             )
         }
@@ -50,20 +51,19 @@ class SignInViewModel @Inject constructor(
 
     fun onSignInClick() {
         if (!_uiState.value.isIdError && !_uiState.value.isPasswordError) {
-            _uiState.update {
-                it.copy(
-                    isSignInSucceed = true
-                )
-            }
-
             viewModelScope.launch {
                 val userInfo = _uiState.value.userInfo
+                saveUserInfoUseCase(
+                    userEntity = userInfo
+                )
+
+                _uiState.update {
+                    it.copy(
+                        isSignInSucceed = true
+                    )
+                }
 
                 _sideEffect.emit(SignInSideEffect.SignInSucceed)
-
-                saveUserInfoUseCase(
-                    userEntity = userInfo.toEntity()
-                )
             }
         } else {
             _uiState.update {

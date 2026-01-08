@@ -7,7 +7,7 @@ import coil.ImageLoader
 import coil.request.ImageRequest
 import com.example.makersassignment.core.common.util.UiState
 import com.example.makersassignment.domain.usecase.GetGalleryImageListUseCase
-import com.example.makersassignment.presentation.home.model.toUiModel
+import com.example.makersassignment.presentation.home.model.GalleryImageUiModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.collections.immutable.toPersistentList
 import kotlinx.coroutines.Dispatchers
@@ -50,7 +50,7 @@ class HomeViewModel @Inject constructor(
                     _uiState.update { state ->
                         state.copy(
                             galleryImageList = UiState.Success(
-                                data.map { it.toUiModel() }.toPersistentList()
+                                data.map { GalleryImageUiModel(galleryImageUiModel = it) }.toPersistentList()
                             ),
                             isLoadingMore = false
                         )
@@ -85,7 +85,7 @@ class HomeViewModel @Inject constructor(
                         _uiState.update { state ->
                             state.copy(
                                 galleryImageList = UiState.Success(
-                                    data = currentState.data.addAll(data.map { it.toUiModel() })
+                                    data = currentState.data.addAll(data.map { GalleryImageUiModel(galleryImageUiModel = it) })
                                 ),
                                 isLoadingMore = false,
                                 currentPage = nextPage
