@@ -42,6 +42,11 @@ gradlePlugin {
             id = "makersassignment.android.library"
             implementationClass = "AndroidLibraryConventionPlugin"
         }
+        // BuildConfig library용
+        register("androidBuildConfig") {
+            id = "makersassignment.android.buildconfig"
+            implementationClass = "AndroidBuildConfigConventionPlugin"
+        }
         // Compose 설정용
         register("androidCompose") {
             id = "makersassignment.android.compose"

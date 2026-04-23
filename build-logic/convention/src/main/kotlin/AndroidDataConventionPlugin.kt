@@ -34,11 +34,14 @@ class AndroidDataConventionPlugin : Plugin<Project> {
                 }
             }
             dependencies {
-                "implementation"(project(":domain"))
                 "implementation"(project(":core:network"))
 
                 // Local
                 "implementation"(libs.findLibrary("androidx.datastore.preferences").get())
+
+                "implementation"(libs.findLibrary("javax.inject").get())
+
+                "implementation"(libs.findBundle("retrofit").get())
             }
         }
     }
