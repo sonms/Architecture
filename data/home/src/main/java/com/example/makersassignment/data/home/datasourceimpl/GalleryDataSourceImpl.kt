@@ -7,7 +7,7 @@ import com.example.makersassignment.data.home.service.GalleryService
 import javax.inject.Inject
 
 
-class GalleryDataSourceImpl @Inject constructor(
+internal class GalleryDataSourceImpl @Inject constructor(
     private val service: GalleryService
 ) : GalleryDataSource {
     override suspend fun getImages(page: Int, limit: Int): List<GalleryImageResponseDto> {

@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 
 @HiltViewModel
-class MyPageViewModel @Inject constructor(
+internal class MyPageViewModel @Inject constructor(
     getUserInfoUseCase: GetUserInfoUseCase,
 ) : ViewModel() {
     val userInfo: StateFlow<MyPageUiModel> = getUserInfoUseCase()

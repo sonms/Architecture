@@ -12,7 +12,7 @@ import com.example.makersassignment.presentation.auth.navigation.Auth
 import com.example.makersassignment.presentation.home.navigation.navigateHome
 import com.example.makersassignment.presentation.mypage.navigation.navigateMyPage
 
-class MainNavigator(
+internal class MainNavigator(
     val navController: NavHostController,
 ) {
     private val currentDestination: NavDestination?
@@ -65,7 +65,7 @@ class MainNavigator(
 }
 
 @Composable
-fun rememberMainNavigator(
+internal fun rememberMainNavigator(
     navController: NavHostController = rememberNavController(),
 ): MainNavigator = remember(navController) {
     MainNavigator(navController)

@@ -28,7 +28,7 @@ import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.toImmutableList
 
 @Composable
-fun MainBottomBar(
+internal fun MainBottomBar(
     isVisible : Boolean,
     tabs: ImmutableList<MainTab>,
     currentTab: MainTab?,
@@ -59,7 +59,7 @@ fun MainBottomBar(
 }
 
 @Composable
-fun MainBottomBarTab(
+internal fun MainBottomBarTab(
     tab: MainTab,
     isSelected: Boolean,
     onClick: () -> Unit,

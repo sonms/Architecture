@@ -23,7 +23,7 @@ import coil.size.Precision
 import com.example.makersassignment.presentation.home.R
 
 @Composable
-fun GalleryImageItem(
+internal fun GalleryImageItem(
     imageUrl : String,
     author : String,
     modifier : Modifier = Modifier

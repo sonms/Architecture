@@ -8,7 +8,7 @@ import com.example.makersassignment.core.navigation.Route
 import com.example.makersassignment.presentation.home.navigation.Home
 import com.example.makersassignment.presentation.mypage.navigation.MyPage
 
-enum class MainTab(
+internal enum class MainTab(
     @param:DrawableRes val selectedIcon: Int,
     @param:DrawableRes val unselectedIcon: Int,
     @param:StringRes val contentDescription: Int,

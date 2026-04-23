@@ -4,7 +4,7 @@ import androidx.compose.runtime.Immutable
 import com.example.makersassignment.domain.local.entity.UserEntity
 
 @Immutable
-data class UserInfoUiModel(
+internal data class UserInfoUiModel(
     val userInfo : UserEntity = UserEntity.EMPTY
 ): UserEntity by userInfo {
     fun modify(

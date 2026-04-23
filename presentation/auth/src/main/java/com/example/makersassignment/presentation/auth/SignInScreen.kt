@@ -37,7 +37,7 @@ import com.example.makersassignment.presentation.auth.component.ErrorMessage
 import timber.log.Timber
 
 @Composable
-fun SignInRoute(
+internal fun SignInRoute(
     navigateHome: () -> Unit,
     viewModel: SignInViewModel = hiltViewModel()
 ) {
@@ -72,7 +72,7 @@ fun SignInRoute(
 }
 
 @Composable
-fun SignInScreen(
+internal fun SignInScreen(
     id : String,
     password : String,
     isIdError : Boolean,

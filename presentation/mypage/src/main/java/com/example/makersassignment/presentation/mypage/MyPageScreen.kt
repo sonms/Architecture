@@ -13,7 +13,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.makersassignment.presentation.mypage.component.UserInfoCard
 
 @Composable
-fun MyPageRoute(
+internal fun MyPageRoute(
     paddingValues: PaddingValues,
     viewModel: MyPageViewModel = hiltViewModel()
 ) {
@@ -27,7 +27,7 @@ fun MyPageRoute(
 }
 
 @Composable
-fun MyPageScreen(
+internal fun MyPageScreen(
     paddingValues: PaddingValues,
     id : String,
     password : String

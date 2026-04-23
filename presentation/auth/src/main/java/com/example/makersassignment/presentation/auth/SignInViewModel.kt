@@ -15,7 +15,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class SignInViewModel @Inject constructor(
+internal class SignInViewModel @Inject constructor(
     private val saveUserInfoUseCase: SaveUserInfoUseCase,
 ) : ViewModel() {
     private val _uiState = MutableStateFlow(SignInState())

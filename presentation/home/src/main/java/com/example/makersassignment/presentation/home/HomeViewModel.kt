@@ -24,7 +24,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(
+internal class HomeViewModel @Inject constructor(
     @param:ApplicationContext val context: Context,
     private val getGalleryImageListUseCase: GetGalleryImageListUseCase,
     private val imageLoader: ImageLoader,

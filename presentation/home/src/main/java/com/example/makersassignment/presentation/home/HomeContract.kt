@@ -6,7 +6,7 @@ import com.example.makersassignment.presentation.home.model.GalleryImageUiModel
 import kotlinx.collections.immutable.PersistentList
 
 @Immutable
-data class HomeUiState(
+internal data class HomeUiState(
     val galleryImageList : UiState<PersistentList<GalleryImageUiModel>> = UiState.Empty,
     val isLoadingMore : Boolean = false,
     val currentPage : Int = 1

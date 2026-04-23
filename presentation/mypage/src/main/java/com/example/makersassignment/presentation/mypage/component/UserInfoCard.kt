@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import com.example.makersassignment.presentation.mypage.R
 
 @Composable
-fun UserInfoCard(
+internal fun UserInfoCard(
     id: String,
     password: String,
     modifier: Modifier = Modifier

@@ -5,7 +5,7 @@ import com.example.makersassignment.domain.home.repository.GalleryRepository
 import com.example.makersassignment.data.home.datasource.GalleryDataSource
 import javax.inject.Inject
 
-class GalleryRepositoryImpl @Inject constructor(
+internal class GalleryRepositoryImpl @Inject constructor(
     private val dataSource: GalleryDataSource
 ) : GalleryRepository {
     private var prefetchBuffer: Pair<Int, List<GalleryImageEntity>>? = null

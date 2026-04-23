@@ -37,7 +37,7 @@ import kotlinx.collections.immutable.PersistentList
 import kotlinx.collections.immutable.toPersistentList
 
 @Composable
-fun HomeRoute(
+internal fun HomeRoute(
     paddingValues: PaddingValues,
     viewModel: HomeViewModel = hiltViewModel()
 ) {
@@ -120,7 +120,7 @@ fun HomeRoute(
 }
 
 @Composable
-fun HomeScreen(
+internal fun HomeScreen(
     paddingValues: PaddingValues,
     lazyGridState: LazyGridState,
     imageList : PersistentList<GalleryImageUiModel>,

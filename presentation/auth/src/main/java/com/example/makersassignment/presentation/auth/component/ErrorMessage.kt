@@ -7,7 +7,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 
 @Composable
-fun ErrorMessage(
+internal fun ErrorMessage(
     text: String,
     modifier: Modifier = Modifier
 ) {

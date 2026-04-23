@@ -5,7 +5,7 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface GalleryService {
+internal interface GalleryService {
     @GET("v2/list")
     suspend fun getImages(
         @Query("page") page : Int,
