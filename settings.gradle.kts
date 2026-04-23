@@ -23,12 +23,24 @@ dependencyResolutionManagement {
 rootProject.name = "MakersAssignment"
 include(":app")
 
-// :domain
-include(":domain:local")
-include(":domain:home")
-include(":core")
+// core
 include(":core:common")
 include(":core:designsystem")
 include(":core:navigation")
 include(":core:type")
+include(":core:di")
 include(":core:network")
+
+// data
+include(":data:local")
+include(":data:home")
+
+// domain
+include(":domain:local")
+include(":domain:home")
+
+// presentation
+include(":presentation:auth")
+include(":presentation:home")
+include(":presentation:main")
+include(":presentation:mypage")

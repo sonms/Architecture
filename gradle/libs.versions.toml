@@ -46,7 +46,8 @@ retrofitKotlinSerializationConverter = "1.0.0"
 # Build Config
 compileSdk = "36"
 minSdk = "24"
-androidGradlePlugin = "8.13.2"  # agp 버전이랑 동일하게
+androidGradlePlugin = "8.13.2"
+material = "1.13.0"  # agp 버전이랑 동일하게
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -102,6 +103,7 @@ kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", ve
 compose-compiler-gradle-plugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
 ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "symbol-processing-gradle-plugin", version.ref = "ksp" }
 hilt-gradlePlugin = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "daggerHilt" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -116,6 +118,7 @@ jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrai
 # Convention Plugins
 makersassignment-android-application = { id = "makersassignment.android.application", version = "unspecified" }
 makersassignment-android-library = { id = "makersassignment.android.library", version = "unspecified" }
+makersassignment-android-buildconfig = { id = "makersassignment.android.buildconfig", version = "unspecified" }
 makersassignment-android-compose = { id = "makersassignment.android.compose", version = "unspecified" }
 makersassignment-android-presentation = { id = "makersassignment.android.presentation", version = "unspecified" }
 makersassignment-android-data = { id = "makersassignment.android.data", version = "unspecified" }
