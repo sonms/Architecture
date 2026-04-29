@@ -4,14 +4,15 @@ import android.app.Application
 import androidx.appcompat.app.AppCompatDelegate
 import coil.ImageLoader
 import coil.ImageLoaderFactory
-import coil.disk.DiskCache
-import coil.memory.MemoryCache
-import coil.util.DebugLogger
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
+import javax.inject.Inject
 
 @HiltAndroidApp
 class MakersAssignmentApplication : Application(), ImageLoaderFactory {
+    @Inject
+    lateinit var imageLoaderProvider: dagger.Lazy<ImageLoader>
+
     override fun onCreate() {
         super.onCreate()
 
@@ -28,20 +29,6 @@ class MakersAssignmentApplication : Application(), ImageLoaderFactory {
     }
 
     override fun newImageLoader(): ImageLoader {
-        return ImageLoader.Builder(this)
-            .memoryCache {
-                MemoryCache.Builder(this)
-                    .maxSizePercent(0.25)
-                    .build()
-            }
-            .diskCache {
-                DiskCache.Builder()
-                    .directory(cacheDir.resolve("image_cache"))
-                    .maxSizeBytes(50 * 1024 * 1024)
-                    .build()
-            }
-            .logger(DebugLogger())
-            .respectCacheHeaders(false)
-            .build()
+        return imageLoaderProvider.get()
     }
 }

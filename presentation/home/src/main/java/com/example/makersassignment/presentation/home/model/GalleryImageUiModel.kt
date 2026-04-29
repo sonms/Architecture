@@ -1,0 +1,9 @@
+package com.example.makersassignment.presentation.home.model
+
+import androidx.compose.runtime.Immutable
+import com.example.makersassignment.domain.home.entity.GalleryImageEntity
+
+@Immutable
+internal data class GalleryImageUiModel(
+    val galleryImageUiModel : GalleryImageEntity = GalleryImageEntity.EMPTY
+) : GalleryImageEntity by galleryImageUiModel

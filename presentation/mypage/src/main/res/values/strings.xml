@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_info_id_label">아이디: %s</string>
+    <string name="user_info_password_label">비밀번호: %s</string>
+</resources>

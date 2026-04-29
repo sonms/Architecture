@@ -1,0 +1,11 @@
+<resources>
+    <string name="sign_in_error">아이디 또는 비밀번호를 확인해주세요</string>
+    <string name="sign_in_id_hint">아이디</string>
+    <string name="sign_in_password_hint">비밀번호</string>
+    <string name="sign_in_id_error_text">아이디는 6~10자리로 입력해주세요</string>
+    <string name="sign_in_password_error_text">비밀번호는 8~12자리로 입력해주세요</string>
+    <string name="sign_in_button_text">로그인</string>
+
+    <string name="user_info_id_label">아이디: %s</string>
+    <string name="user_info_password_label">비밀번호: %s</string>
+</resources>

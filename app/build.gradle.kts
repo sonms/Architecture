@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import java.util.Properties
 
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.makersassignment.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.dagger.hilt)
@@ -55,27 +55,18 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.datastore.core.android)
-    testImplementation(libs.junit)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.bundles.test)
+    // core
+    implementation(projects.core.di)
 
-    debugImplementation(libs.bundles.debug)
+    // data
+    implementation(projects.data.home)
+    implementation(projects.data.local)
 
-    implementation(libs.bundles.androidx)
-    implementation(platform(libs.androidx.compose.bom))
-
-    implementation(libs.kotlinx.immutable)
-
-    implementation(platform(libs.okhttp.bom))
-    implementation(libs.bundles.okhttp)
-    implementation(libs.bundles.retrofit)
-    implementation(libs.kotlinx.serialization.json)
-
-    implementation(libs.bundles.hilt)
-    ksp(libs.hilt.compiler)
-
-    implementation(libs.coil.compose)
+    // presentation
+    implementation(projects.presentation.main)
 
     implementation(libs.timber)
+    implementation(libs.androidx.appcompat)
+
+    implementation(libs.coil.compose)
 }

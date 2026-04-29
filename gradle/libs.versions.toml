@@ -5,11 +5,13 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 
 # Kotlin
-agp = "8.11.1"
-kotlin = "2.2.0"
+agp = "8.13.2"
+kotlin = "2.3.20"
 kotlinxImmutable = "0.4.0"
-kotlinxSerializationJson = "1.9.0"
-jetbrainsKotlinJvm = "2.2.0"
+kotlinxSerializationJson = "1.11.0"
+jetbrainsKotlinJvm = "2.3.20"
+coroutines = "1.10.2"
+
 
 # AndroidX
 coreKtx = "1.16.0"
@@ -24,11 +26,11 @@ datastorePreferences = "1.1.7"
 datastoreCoreAndroid = "1.1.7"
 
 # Hilt
-daggerHilt = "2.57"
-hiltNavigationCompose = "1.2.0"
+daggerHilt = "2.58"
+hiltNavigationCompose = "1.3.0"
 
 # Kotlin Symbol Processing
-ksp = "2.2.0-2.0.2"
+ksp = "2.3.5"
 
 # Coil
 coil = "2.7.0"
@@ -40,6 +42,12 @@ timber = "5.0.1"
 okhttp = "4.11.0"
 retrofit = "2.11.0"
 retrofitKotlinSerializationConverter = "1.0.0"
+
+# Build Config
+compileSdk = "36"
+minSdk = "24"
+androidGradlePlugin = "8.13.2"
+material = "1.13.0"  # agp 버전이랑 동일하게
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -75,6 +83,8 @@ retrofit-kotlin-serialization-converter = { group = "com.jakewharton.retrofit", 
 # Kotlin
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 kotlinx-immutable = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "kotlinxImmutable" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+javax-inject = { group = "javax.inject", name = "javax.inject", version = "1" }
 
 # Hilt
 hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerHilt" }
@@ -87,6 +97,14 @@ coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coi
 # Timber
 timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
 
+# Build Tools
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+compose-compiler-gradle-plugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "symbol-processing-gradle-plugin", version.ref = "ksp" }
+hilt-gradlePlugin = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "daggerHilt" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -96,6 +114,18 @@ devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "daggerHilt" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+
+# Convention Plugins
+makersassignment-android-application = { id = "makersassignment.android.application", version = "unspecified" }
+makersassignment-android-library = { id = "makersassignment.android.library", version = "unspecified" }
+makersassignment-android-buildconfig = { id = "makersassignment.android.buildconfig", version = "unspecified" }
+makersassignment-android-compose = { id = "makersassignment.android.compose", version = "unspecified" }
+makersassignment-android-presentation = { id = "makersassignment.android.presentation", version = "unspecified" }
+makersassignment-android-data = { id = "makersassignment.android.data", version = "unspecified" }
+makersassignment-kotlin-jvm = { id = "makersassignment.kotlin.jvm", version = "unspecified" }
+makersassignment-hilt = { id = "makersassignment.hilt", version = "unspecified" }
+makersassignment-serialization = { id = "makersassignment.serialization", version = "unspecified" }
+makersassignment-android-test = { id = "makersassignment.android.test", version = "unspecified" }
 
 [bundles]
 androidx = [
@@ -138,4 +168,13 @@ retrofit = [
 hilt = [
     "hilt",
     "hilt-navigation-compose"
+]
+
+compose = [
+    "androidx-activity-compose",
+    #"androidx-lifecycle-runtimeCompose",
+    "androidx-material3",
+    #"androidx-material-icons-extended",
+    "androidx-ui",
+    "androidx-ui-tooling-preview",
 ]
